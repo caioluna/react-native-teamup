@@ -20,7 +20,7 @@ export function NewGroup() {
   const handleNewGroup = async () => {
     try {
       if (group.trim().length === 0) {
-        return Alert.alert('Novo Grupo', 'O nome da turma não pode ser vazio.')
+        return Alert.alert('Oops!', 'You must enter a group name first.')
       }
 
       await groupCreate(group)
@@ -28,9 +28,9 @@ export function NewGroup() {
 
     } catch (error) {
       if (error instanceof AppError) {
-        Alert.alert('Novo Grupo', error.message)
+        Alert.alert('Oops!', error.message)
       } else {
-        Alert.alert('Novo Grupo', 'Não foi possível criar a turma.')
+        Alert.alert('Sorry...', 'We had a problem creating your group.')
         console.log(error);
       }
     }
@@ -44,18 +44,18 @@ export function NewGroup() {
         <Icon />
 
         <Highlight
-          title='Nova Turma'
-          subtitle='crie uma turma para adicionar pessoas'
+          title='New Group'
+          subtitle='create a new group to add your friends'
         />
 
         <Input
-          placeholder='Nome da turma'
+          placeholder='Group name'
           onChangeText={setGroup}
         />
 
         <Button
           style={{ marginTop: 20 }}
-          title='Criar'
+          title='Create'
           onPress={handleNewGroup}
         />
       </Content>

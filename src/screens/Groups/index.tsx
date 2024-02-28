@@ -33,7 +33,7 @@ export function Groups() {
       setGroups(data)
 
     } catch (error) {
-      Alert.alert('Turmas', 'Não foi possível carregar as turmas.')
+      Alert.alert('Sorry', 'We had a problem fetching your groups.')
     } finally {
       setIsLoading(false)
     }
@@ -50,8 +50,8 @@ export function Groups() {
       <Header />
 
       <Highlight
-        title='Turmas'
-        subtitle='jogue com a sua turma'
+        title='Team.up'
+        subtitle='and play with your friends'
       />
 
       {
@@ -64,7 +64,10 @@ export function Groups() {
               keyExtractor={item => item}
               contentContainerStyle={groups.length === 0 && { flex: 1 }}
               ListEmptyComponent={() => (
-                <EmptyList message="Clique no botão 'Criar nova turma' para adicionar pessoas à sua turma." />
+                <EmptyList
+                  message="Your group list is empty."
+                  extra="Tap on 'Create new group' to start."
+                />
               )}
               renderItem={({ item }) => (
                 <GroupCard
@@ -76,7 +79,7 @@ export function Groups() {
           )}
 
       <Button
-        title='Criar nova turma'
+        title='Create new group'
         onPress={handleNavigateNewGroup}
       />
     </Container>
