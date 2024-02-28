@@ -1,4 +1,4 @@
-# ![React Native App](/assets/readme/readme_cover.png)
+# ![React Native App](src/assets/readme/readme_cover.png)
 
 # Team.up List - React Native App
 
@@ -19,8 +19,8 @@ Here are a couple screenshot of the app.
 <table>
 <tr>
 <td>
-  <img src="assets/readme/phone1.png" alt="drawing" width="300"/>
-  <img src="assets/readme/phone2.png" alt="drawing" width="300"/>
+  <img src="src/assets/readme/phone1.png" alt="drawing" width="300"/>
+  <img src="src/assets/readme/phone2.png" alt="drawing" width="300"/>
 </td>
 </tr>
 </table>
